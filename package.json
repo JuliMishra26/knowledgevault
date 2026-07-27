@@ -1,0 +1,42 @@
+{
+  "name": "knowledgevault",
+  "version": "1.0.0",
+  "description": "AI-powered RAG application built with:",
+  "main": "index.js",
+  "scripts": {
+  "prepare": "husky",
+    "commit": "cz"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "commitizen": "^4.3.2",
+    "cz-git": "^1.13.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.2.0",
+    "prettier": "^3.9.6",
+     "prettier-plugin-prisma": "^5.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
+  },
+  "lint-staged": {
+    "backend/**/*.{ts,js,json,prisma}": [
+      "prettier --write",
+      "npm --prefix backend run lint -- --fix"
+    ],
+    "frontend/**/*.{ts,tsx,js,json}": [
+      "prettier --write",
+      "npm --prefix frontend run lint -- --fix"
+    ],
+    "*.{md}": [
+      "prettier --write"
+    ]
+  }
+}

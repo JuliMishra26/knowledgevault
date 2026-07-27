@@ -1,0 +1,22 @@
+{
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "driver": "PostgreSQL",
+      "name": "knowledgevault-postgres",
+      "connectString": "postgresql://postgres:postgres@localhost:5432/knowledgevault"
+    },
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "knowledgevault-postgres",
+      "database": "knowledgevault",
+      "username": "Julim12345"
+    }
+  ]
+}
